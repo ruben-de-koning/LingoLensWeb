@@ -3,57 +3,138 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LingoLens - Translate words instantly</title>
+    <title>LingoLens</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         body {
+            font-family: "Source Sans Pro", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            text-align: center;
+        }
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            margin: 2em auto 1em;
+            background: #ddd;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background: #ffffff;
+            font-size: 1.5em;
+            color: #555;
         }
-        #wrapper {
-            text-align: center;
-            max-width: 40em;
-        }
-        ul.feature-list {
-            list-style: disc;
-            margin: 2em 0;
-            padding-left: 1.2em;
-            text-align: left;
+        .tagline {
+            font-size: 1.4em;
+            margin-bottom: 1em;
         }
         .store-buttons {
-            margin-top: 2em;
+            margin-bottom: 2em;
         }
         .store-buttons a {
+            display: inline-block;
+            padding: 0.5em 1em;
             margin: 0 0.5em;
+            border-radius: 0.25em;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .browser-window {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 6px 6px 0 0;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .browser-bar {
+            height: 30px;
+            background: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            padding: 0 0.5em;
+        }
+        .browser-bar span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 0.4em;
+            display: inline-block;
+        }
+        .browser-bar .red { background: #ff5f57; }
+        .browser-bar .yellow { background: #ffbd2e; }
+        .browser-bar .green { background: #28c940; }
+        .section {
+            padding: 2em 1em;
+        }
+        .paper { background: #fff8e7; }
+        .sky { background: #e6f4ff; }
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+            max-width: 28em;
+            margin: 0 auto;
+        }
+        .features-list li::before {
+            content: "\2713\0020";
+            color: #3f8f3f;
+        }
+        .testimonials {
+            font-style: italic;
+            max-width: 28em;
+            margin: 0 auto;
+        }
+        .placeholder-box {
+            width: 200px;
+            height: 120px;
+            background: #eee;
+            border: 1px dashed #aaa;
+            margin: 1em auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
         }
     </style>
 </head>
-<body class="is-preload">
-<div id="wrapper" class="container">
-    <header>
-        <span class="icon solid fa-language" style="font-size:3em"></span>
-        <h1>LingoLens</h1>
-        <p>Instant translations and grammar insights anywhere on the web.</p>
-    </header>
-    <ul class="feature-list">
-        <li>Double‑click any word to translate and see its word type.</li>
-        <li>Hear translations with built‑in text‑to‑speech.</li>
-        <li>Generate example sentences for better understanding.</li>
-        <li>Save translation pairs for later study.</li>
-        <li>Quickly enable or disable and choose languages in the popup window.</li>
-    </ul>
+<body>
+    <div class="logo-placeholder">Logo</div>
+    <div class="tagline">Quickly translate text on any webpage</div>
     <div class="store-buttons">
-        <a class="button" href="https://chrome.google.com/webstore/detail/lingolens">Chrome Web Store</a>
-        <a class="button" href="https://addons.mozilla.org/firefox/addon/lingolens">Firefox Add-ons</a>
+        <a href="https://chrome.google.com/webstore/detail/lingolens">Get for Chrome</a>
+        <a href="https://addons.mozilla.org/firefox/addon/lingolens">Get for Firefox</a>
     </div>
-</div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+
+    <div class="browser-window">
+        <div class="browser-bar">
+            <span class="red"></span><span class="yellow"></span><span class="green"></span>
+        </div>
+        <section class="section paper">
+            <div class="placeholder-box">Tooltip Example</div>
+            <div class="placeholder-box">Popup Example</div>
+        </section>
+        <section class="section sky">
+            <ul class="features-list">
+                <li>Double-click any word to translate and see its word type.</li>
+                <li>Hear translations with built-in text-to-speech.</li>
+                <li>Generate example sentences for better understanding.</li>
+                <li>Save translation pairs for later study.</li>
+                <li>Quickly enable or disable and choose languages in the popup window.</li>
+            </ul>
+        </section>
+        <section class="section paper">
+            <div class="testimonials">
+                <p>“LingoLens makes reading foreign blogs a breeze.” &ndash; Sam</p>
+                <p>“I like how it saves translations for later.” &ndash; Alex</p>
+            </div>
+        </section>
+    </div>
+
 </body>
 </html>
